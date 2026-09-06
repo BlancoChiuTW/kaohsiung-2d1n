@@ -28,6 +28,7 @@ export const days = [
       {
         time: '11:00',
         title: '抵達左營，先去鹽埕放行李',
+        photo: 'zuoying',
         kind: 'core',
         note: 'Uber 約 25 分鐘；不趕的話捷運紅線轉橘線到鹽埕埔站，約 35 分鐘。飯店還不能入住就寄行李，這件事先做完，後面才會輕鬆。',
       },
@@ -40,18 +41,21 @@ export const days = [
       {
         time: '13:30',
         title: '鼓山輪渡站 → 旗津',
+        photo: 'ferry',
         kind: 'core',
         note: '船程五分鐘，班次很密。刷卡進站，機車跟人一起上船那個畫面本身就很好拍。站船尾拍港口。',
       },
       {
         time: '13:50',
         title: '旗津老街，租四輪電動腳踏車',
+        photo: 'cijin_st',
         kind: 'core',
         note: '選有遮陽棚的那種。島上景點之間有一到兩公里，用走的會後悔。老街出口整排都在租，可以比一下價。',
       },
       {
         time: '14:30',
         title: '彩虹教堂 + 海珍珠',
+        photo: 'rainbow',
         kind: 'core',
         star: true,
         note: '彩虹教堂傍晚就關門，所以擺在前面。重點是水面倒影，蹲低一點拍，把整片彩虹框進水裡。旁邊的黃金貝殼順路。',
@@ -59,6 +63,7 @@ export const days = [
       {
         time: '15:20',
         title: '星空隧道',
+        photo: 'startunnel',
         kind: 'flex',
         note: '隧道裡面涼，走完剛好當作中場休息。出口直接接海岸線，有一段海堤可以吹風。不想動就在這裡多待一下。',
       },
@@ -71,12 +76,14 @@ export const days = [
       {
         time: '17:00',
         title: '旗後砲台',
+        photo: 'fort',
         kind: 'flex',
         note: '紅磚拱門是全旗津最好用的一個框，逆光拍剪影很出片。不想爬就跳過，直接去燈塔卡位。',
       },
       {
         time: '17:45',
         title: '旗後燈塔，等夕陽',
+        photo: 'lighthouse',
         kind: 'core',
         star: true,
         note: '九月日落大約 18:00 到 18:20，越接近月底越早。提早卡位，白色燈塔配橘色天空是這趟最漂亮的一張。',
@@ -103,6 +110,7 @@ export const days = [
       {
         time: '21:00',
         title: '加碼：壽山 LOVE 觀景台',
+        photo: 'shoushan',
         kind: 'bonus',
         note: 'Uber 上去十分鐘，港口、市區、85 大樓一次收進同一個畫面。觀景台叫車很好叫，不用擔心下不來。累了就直接回飯店，不虧。',
       },
@@ -125,6 +133,7 @@ export const days = [
       {
         time: '10:30',
         title: '打狗英國領事館',
+        photo: 'consulate',
         kind: 'flex',
         note: '山上那棟白牆紅磚，往下看整個高雄港。想睡到十一點就整段跳過，這天的主軸在下午。',
       },
@@ -137,18 +146,21 @@ export const days = [
       {
         time: '13:15',
         title: '駁二藝術特區',
+        photo: 'pier2',
         kind: 'core',
         note: '大勇區、蓬萊區。先逛有冷氣的室內展，外面最曬的時候躲在裡面。倉庫外牆的塗鴉和公仔隨手拍都有東西。',
       },
       {
         time: '14:20',
         title: '棧貳庫 KW2',
+        photo: 'kw2',
         kind: 'core',
         note: '港邊的白色倉庫，冷氣、咖啡、伴手禮一次解決。從這裡走去大港橋只要幾分鐘。',
       },
       {
         time: '14:50',
         title: '大港橋，卡 15:00 開合秀',
+        photo: 'dagang',
         kind: 'core',
         star: true,
         note: '整座橋會旋轉打開讓船通過。站蓬萊停車場那一側可以拍到完整的橋身。提前十分鐘到就有好位置。',
@@ -156,12 +168,14 @@ export const days = [
       {
         time: '15:30',
         title: '哈瑪星鐵道文化園區',
+        photo: 'hamasen',
         kind: 'flex',
         note: '大草皮加舊鐵軌，下午三點半光線開始斜，人站在鐵軌上拍很有味道。輕軌一站就到。',
       },
       {
         time: '16:00',
         title: '加碼：高雄流行音樂中心',
+        photo: 'music',
         kind: 'bonus',
         note: '白色的海洋造型建築，白天拍幾何線條，傍晚拍剪影。時間緊就砍掉，這站純加分。',
       },
@@ -198,6 +212,7 @@ export const categories = [
 export const options = [
   {
     id: 'meilidao',
+    photo: 'dome',
     name: '美麗島站 光之穹頂',
     cats: ['photo', 'indoor'],
     where: '捷運美麗島站',
@@ -207,6 +222,7 @@ export const options = [
   },
   {
     id: 'library',
+    photo: 'library',
     name: '高雄市立圖書總館',
     cats: ['photo', 'indoor'],
     where: '捷運三多商圈站',
@@ -216,6 +232,7 @@ export const options = [
   },
   {
     id: 'qianzhen',
+    photo: 'cianjhen',
     name: '前鎮之星',
     cats: ['photo'],
     where: '離圖書總館走路 10 分鐘',
@@ -225,6 +242,7 @@ export const options = [
   },
   {
     id: 'weiwuying',
+    photo: 'weiwuying',
     name: '衛武營國家藝術文化中心',
     cats: ['photo', 'indoor'],
     where: '捷運衛武營站',
@@ -234,6 +252,7 @@ export const options = [
   },
   {
     id: 'mimi',
+    photo: 'mimi',
     name: '衛武迷迷村',
     cats: ['photo'],
     where: '衛武營對面社區',
@@ -243,6 +262,7 @@ export const options = [
   },
   {
     id: 'love',
+    photo: 'shoushan',
     name: '壽山 LOVE 觀景台',
     cats: ['night'],
     where: '鹽埕 Uber 上山約 10 分鐘',
@@ -252,6 +272,7 @@ export const options = [
   },
   {
     id: 'tuntex',
+    photo: 'tuntex',
     name: '85 大樓觀景台',
     cats: ['night', 'indoor'],
     where: '捷運三多商圈站',
@@ -261,6 +282,7 @@ export const options = [
   },
   {
     id: 'loveriver',
+    photo: 'loveriver',
     name: '愛河 + 愛之船',
     cats: ['night'],
     where: '鹽埕走路就到',
@@ -270,6 +292,7 @@ export const options = [
   },
   {
     id: 'piers',
+    photo: 'glorypier',
     name: '光榮碼頭 / 真愛碼頭',
     cats: ['night', 'sea'],
     where: '流行音樂中心旁',
@@ -279,6 +302,7 @@ export const options = [
   },
   {
     id: 'windmill',
+    photo: 'windmill',
     name: '旗津風車公園',
     cats: ['sea'],
     where: '旗津，電動車 5 分鐘',
@@ -288,6 +312,7 @@ export const options = [
   },
   {
     id: 'shell',
+    photo: 'shell',
     name: '旗津貝殼館',
     cats: ['sea', 'indoor'],
     where: '旗津海岸公園內',
@@ -297,6 +322,7 @@ export const options = [
   },
   {
     id: 'sizihwan',
+    photo: 'sizihwan',
     name: '中山大學海邊 + 西子灣堤防',
     cats: ['sea', 'night'],
     where: '哈瑪星旁',
@@ -306,6 +332,7 @@ export const options = [
   },
   {
     id: 'ruifeng',
+    photo: 'ruifeng',
     name: '瑞豐夜市',
     cats: ['food'],
     where: '鹽埕 Uber 約 20 分鐘',
@@ -315,6 +342,7 @@ export const options = [
   },
   {
     id: 'liuhe',
+    photo: 'liuhe',
     name: '六合夜市',
     cats: ['food'],
     where: '捷運美麗島站出口',
@@ -324,6 +352,7 @@ export const options = [
   },
   {
     id: 'yancheng',
+    photo: 'yancheng',
     name: '鹽埕老店巡禮',
     cats: ['food'],
     where: '鹽埕，全部走路 10 分鐘內',
@@ -333,6 +362,7 @@ export const options = [
   },
   {
     id: 'seafood',
+    photo: 'cijin_st',
     name: '旗津海產街',
     cats: ['food', 'sea'],
     where: '旗津老街',
@@ -342,6 +372,7 @@ export const options = [
   },
   {
     id: 'kmfa',
+    photo: 'kmfa',
     name: '高雄市立美術館',
     cats: ['indoor', 'photo'],
     where: '內惟藝術中心一帶',
@@ -351,6 +382,7 @@ export const options = [
   },
   {
     id: 'mall',
+    photo: 'dreammall',
     name: '大立百貨 / 夢時代',
     cats: ['indoor'],
     where: '捷運或輕軌可到',

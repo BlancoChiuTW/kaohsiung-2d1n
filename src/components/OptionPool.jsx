@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import Icon from './Icon';
+import Photo from './Photo';
 import { categories, options } from '../data/trip';
 
 const STORE_KEY = 'kh2d1n.picked.v1';
@@ -105,46 +106,49 @@ export default function OptionPool() {
             const on = picked.has(o.id);
             return (
               <li key={o.id} className={`card ${on ? 'is-picked' : ''}`}>
-                <button
-                  type="button"
-                  className="card-check"
-                  onClick={() => toggle(o.id)}
-                  aria-pressed={on}
-                  aria-label={`${on ? '取消選取' : '加入'} ${o.name}`}
-                >
-                  <Icon name="check" size={15} strokeWidth={2.6} />
-                </button>
-                <div className="card-main">
-                  <h3 className="card-name">{o.name}</h3>
-                  <div className="card-cats">
-                    {o.cats.map((c) => (
-                      <span key={c} className="minicat">
-                        <Icon name={catIcon[c]} size={11} />
-                        {categories.find((x) => x.id === c)?.label}
-                      </span>
-                    ))}
+                {o.photo ? <Photo id={o.photo} alt={o.name} className="photo-card" /> : null}
+                <div className="card-body">
+                  <button
+                    type="button"
+                    className="card-check"
+                    onClick={() => toggle(o.id)}
+                    aria-pressed={on}
+                    aria-label={`${on ? '取消選取' : '加入'} ${o.name}`}
+                  >
+                    <Icon name="check" size={15} strokeWidth={2.6} />
+                  </button>
+                  <div className="card-main">
+                    <h3 className="card-name">{o.name}</h3>
+                    <div className="card-cats">
+                      {o.cats.map((c) => (
+                        <span key={c} className="minicat">
+                          <Icon name={catIcon[c]} size={11} />
+                          {categories.find((x) => x.id === c)?.label}
+                        </span>
+                      ))}
+                    </div>
+                    <p className="card-why">{o.why}</p>
+                    <dl className="card-facts">
+                      <div>
+                        <dt>
+                          <Icon name="pin" size={13} />
+                        </dt>
+                        <dd>{o.where}</dd>
+                      </div>
+                      <div>
+                        <dt>
+                          <Icon name="clock" size={13} />
+                        </dt>
+                        <dd>{o.time}</dd>
+                      </div>
+                      <div>
+                        <dt>
+                          <Icon name="wallet" size={13} />
+                        </dt>
+                        <dd>{o.cost}</dd>
+                      </div>
+                    </dl>
                   </div>
-                  <p className="card-why">{o.why}</p>
-                  <dl className="card-facts">
-                    <div>
-                      <dt>
-                        <Icon name="pin" size={13} />
-                      </dt>
-                      <dd>{o.where}</dd>
-                    </div>
-                    <div>
-                      <dt>
-                        <Icon name="clock" size={13} />
-                      </dt>
-                      <dd>{o.time}</dd>
-                    </div>
-                    <div>
-                      <dt>
-                        <Icon name="wallet" size={13} />
-                      </dt>
-                      <dd>{o.cost}</dd>
-                    </div>
-                  </dl>
                 </div>
               </li>
             );

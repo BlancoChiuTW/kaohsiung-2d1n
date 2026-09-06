@@ -4,6 +4,7 @@
 第一天走海線（旗津、西子灣、燈塔夕陽），第二天走港區（駁二、大港橋、亞灣）。
 
 行動優先，字級與行距照 iOS 26 的 type ramp 排，在 iPhone 上讀起來像一篇攻略網誌。
+配色刻意收成近單色的中性系統，顏色全部交給照片。
 
 ## 這份行程的設計原則
 
@@ -11,6 +12,22 @@
 - **不排滿**：每天只留必要的主線，中間刻意留白。頁面上的「行程密度」開關可以把彈性與加碼收起來，只看一定會做的事。
 - **加碼另外放**：18 個可去可不去的點獨立成一個選項池，依出片、夜景、吃、避雨避暑、海邊分類，勾選狀態存在瀏覽器的 `localStorage`。
 - **有備案**：下雨、太熱、太累各有一套替代版本。
+- **每個點都有照片**：點圖會開到 Wikimedia Commons 的原始檔案頁，作者與授權都在那裡。
+
+## 照片
+
+30 張照片全部來自 Wikimedia Commons，已下載處理成 webp 放在 `public/photos/`，
+不 hotlink 別人的 CDN。清單與授權見 [PHOTO-CREDITS.md](PHOTO-CREDITS.md)。
+
+換圖流程：改 `tools/photos.manifest.json` 的 `download` 與 `source`，然後
+
+```bash
+npm i --no-save sharp
+node tools/fetch-photos.mjs
+```
+
+會重新產生 `<key>-640.webp` 與 `<key>-1280.webp`。之後把新的 credit 更新回
+`src/data/photos.js`（該檔開頭有說明）。
 
 ## 開發
 
@@ -39,6 +56,7 @@ npm run lint
 | `categories` | 加碼分類 |
 | `beforeYouGo` | 出發前要確認的時效性資訊 |
 | `transit` / `budget` | 交通與花費小抄 |
+| `photo`（欄位） | 對應 `src/data/photos.js` 的 key，決定該項顯示哪張圖 |
 | `planB` / `goldenHours` | 備案與拍照時間表 |
 
 改完存檔就好，元件會自動吃新的資料。

@@ -30,39 +30,43 @@
 }
 
 :root {
-  --bg: #f2f2f7;
+  --bg: #f4f4f2;
   --bg-elev: #ffffff;
-  --bg-glass: rgba(249, 249, 251, 0.72);
-  --label: #000000;
-  --label-2: rgba(60, 60, 67, 0.6);
-  --label-3: rgba(60, 60, 67, 0.32);
-  --sep: rgba(60, 60, 67, 0.16);
-  --sep-strong: rgba(60, 60, 67, 0.29);
-  --fill: rgba(120, 120, 128, 0.1);
-  --fill-2: rgba(120, 120, 128, 0.16);
-  --tint: #0e8fa3;
-  --tint-soft: rgba(14, 143, 163, 0.12);
-  --sun: #c2660a;
-  --sun-soft: rgba(194, 102, 10, 0.12);
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.05);
+  --bg-glass: rgba(248, 248, 246, 0.78);
+  --label: #111113;
+  --label-2: #6c6c72;
+  --label-3: #9b9ba1;
+  --sep: rgba(17, 17, 19, 0.08);
+  --sep-strong: rgba(17, 17, 19, 0.13);
+  --fill: rgba(17, 17, 19, 0.045);
+  --fill-2: rgba(17, 17, 19, 0.08);
+  /* 主色即墨色：所有 active 狀態都是實心黑，顏色留給照片 */
+  --tint: #111113;
+  --on-tint: #ffffff;
+  --tint-soft: rgba(17, 17, 19, 0.06);
+  /* 唯一的彩色重點，只用在「必拍」與已選標記 */
+  --mark: #96662a;
+  --mark-soft: rgba(150, 102, 42, 0.1);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 10px 28px rgba(0, 0, 0, 0.045);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #000000;
-    --bg-elev: #1c1c1e;
-    --bg-glass: rgba(28, 28, 30, 0.72);
-    --label: #ffffff;
-    --label-2: rgba(235, 235, 245, 0.6);
-    --label-3: rgba(235, 235, 245, 0.3);
-    --sep: rgba(84, 84, 88, 0.4);
-    --sep-strong: rgba(84, 84, 88, 0.65);
-    --fill: rgba(120, 120, 128, 0.2);
-    --fill-2: rgba(120, 120, 128, 0.32);
-    --tint: #48c9dd;
-    --tint-soft: rgba(72, 201, 221, 0.16);
-    --sun: #ff9f0a;
-    --sun-soft: rgba(255, 159, 10, 0.16);
+    --bg: #0b0b0c;
+    --bg-elev: #161618;
+    --bg-glass: rgba(18, 18, 20, 0.76);
+    --label: #f4f4f2;
+    --label-2: #9d9da4;
+    --label-3: #6d6d74;
+    --sep: rgba(255, 255, 255, 0.09);
+    --sep-strong: rgba(255, 255, 255, 0.16);
+    --fill: rgba(255, 255, 255, 0.06);
+    --fill-2: rgba(255, 255, 255, 0.11);
+    --tint: #f4f4f2;
+    --on-tint: #111113;
+    --tint-soft: rgba(255, 255, 255, 0.09);
+    --mark: #d3a25f;
+    --mark-soft: rgba(211, 162, 95, 0.14);
     --shadow: none;
   }
 }
@@ -72,7 +76,6 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
 }
 
 body {

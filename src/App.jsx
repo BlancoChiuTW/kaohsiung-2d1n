@@ -13,6 +13,9 @@ import {
 } from './data/trip';
 import './App.css';
 
+// 章節捲到定位後標題大約落在這條線下方，用來判斷「現在在哪一節」
+const ACTIVE_LINE = 140;
+
 const SECTIONS = [
   { id: 'day1', label: 'Day 1' },
   { id: 'day2', label: 'Day 2' },
@@ -36,21 +39,31 @@ function useScrollProgress() {
   return p;
 }
 
+// 取「最後一個標題已經捲過導覽列」的章節，比 IntersectionObserver 的可視區判斷穩定
 function useActiveSection() {
   const [active, setActive] = useState('day1');
   useEffect(() => {
     const els = SECTIONS.map((s) => document.getElementById(s.id)).filter(Boolean);
-    const io = new IntersectionObserver(
-      (entries) => {
-        const vis = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (vis[0]) setActive(vis[0].target.id);
-      },
-      { rootMargin: '-96px 0px -58% 0px', threshold: 0 },
-    );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    let raf = 0;
+    const measure = () => {
+      raf = 0;
+      let cur = els[0]?.id ?? 'day1';
+      for (const el of els) {
+        if (el.getBoundingClientRect().top <= ACTIVE_LINE) cur = el.id;
+      }
+      setActive(cur);
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(measure);
+    };
+    measure();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      if (raf) cancelAnimationFrame(raf);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
   return active;
 }
@@ -76,24 +89,29 @@ export default function App() {
   const [coreOnly, setCoreOnly] = useState(false);
   const navRef = useRef(null);
 
+  // 只捲導覽列自己的水平捲軸。用 scrollIntoView 會連帶動到整頁，跟章節跳轉打架。
   useEffect(() => {
-    const nav = navRef.current;
-    if (!nav) return;
-    const el = nav.querySelector('.is-active');
-    if (el) el.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+    const rail = navRef.current;
+    const el = rail?.querySelector('.is-active');
+    if (!rail || !el) return;
+    const left = el.offsetLeft - (rail.clientWidth - el.clientWidth) / 2;
+    rail.scrollTo({ left: Math.max(0, left), behavior: 'smooth' });
   }, [active]);
 
+  // 短距離用平滑捲動，跨越大半頁時直接瞬移，免得滾好幾秒
   const jump = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!el) return;
+    const far = Math.abs(el.getBoundingClientRect().top) > window.innerHeight * 2.5;
+    el.scrollIntoView({ behavior: far ? 'instant' : 'smooth', block: 'start' });
   };
 
   return (
     <>
       <div className="progress" style={{ transform: `scaleX(${progress})` }} aria-hidden="true" />
 
-      <nav className="navbar" ref={navRef} aria-label="章節導覽">
-        <div className="navbar-inner">
+      <nav className="navbar" aria-label="章節導覽">
+        <div className="navbar-inner" ref={navRef}>
           {SECTIONS.map((s) => (
             <button
               key={s.id}
@@ -242,6 +260,9 @@ export default function App() {
 
         <footer className="foot">
           <p>祝玩得開心。累了就坐下來，行程本來就是拿來刪的。</p>
+          <p className="foot-credit">
+            照片取自 Wikimedia Commons，點任何一張都會開到原始檔案頁，上面有作者與授權。
+          </p>
         </footer>
       </main>
     </>
