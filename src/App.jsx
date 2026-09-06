@@ -2,15 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import Icon from './components/Icon';
 import Timeline from './components/Timeline';
 import OptionPool from './components/OptionPool';
-import {
-  beforeYouGo,
-  budget,
-  days,
-  goldenHours,
-  meta,
-  planB,
-  transit,
-} from './data/trip';
+import Eats from './components/Eats';
+import { beforeYouGo, days, goldenHours, meta, planB, transit } from './data/trip';
 import './App.css';
 
 // 章節捲到定位後標題大約落在這條線下方，用來判斷「現在在哪一節」
@@ -20,6 +13,7 @@ const SECTIONS = [
   { id: 'day1', label: 'Day 1' },
   { id: 'day2', label: 'Day 2' },
   { id: 'pool', label: '加碼' },
+  { id: 'eat', label: '吃的' },
   { id: 'light', label: '光線' },
   { id: 'planb', label: '備案' },
   { id: 'info', label: '情報' },
@@ -127,7 +121,7 @@ export default function App() {
 
       <main className="wrap">
         <header className="hero">
-          <p className="hero-kicker">兩天一夜．九月．一個人也很好</p>
+          <p className="hero-kicker">兩天一夜．九月．不騎車</p>
           <h1 className="hero-title">{meta.title}</h1>
           <p className="hero-sub">{meta.subtitle}</p>
           <p className="hero-lead">{meta.lead}</p>
@@ -153,7 +147,7 @@ export default function App() {
           <div className="toolbar-txt">
             <p className="toolbar-title">行程密度</p>
             <p className="toolbar-note">
-              {coreOnly ? '只顯示一定會做的事，中間全是你的時間。' : '主線加上彈性與加碼，全部攤開。'}
+              {coreOnly ? '只顯示主線。' : '主線、彈性、加碼全部顯示。'}
             </p>
           </div>
           <button
@@ -183,11 +177,21 @@ export default function App() {
         <section id="pool" className="sec">
           <SectionHead
             kicker="去不去都可以"
-            icon="star"
+            icon="pin"
             title="加碼選項池"
-            lead="這些全部是可去可不去的。當天看天氣、看腳力、看心情，勾起來的會留在這個瀏覽器裡，下次打開還在。"
+            lead="以下都是可去可不去的。勾起來的會存在這個瀏覽器，下次打開還在。"
           />
           <OptionPool />
+        </section>
+
+        <section id="eat" className="sec">
+          <SectionHead
+            kicker="咖啡廳與餐廳"
+            icon="food"
+            title="吃的"
+            lead="依兩條路線分開。點店名會開 Google 地圖。營業時間和公休日變動很快，出發前再確認一次。"
+          />
+          <Eats />
         </section>
 
         <section id="light" className="sec">
@@ -207,7 +211,7 @@ export default function App() {
             kicker="計畫趕不上變化"
             icon="rain"
             title="備案"
-            lead="九月的高雄可能午後雷陣雨，也可能整天曬到脫水。任何一種都有對應版本。"
+            lead="九月可能午後雷陣雨，也可能整天曬。兩種都有對應版本。"
           />
           <div className="plans">
             {planB.map((p) => (
@@ -242,24 +246,10 @@ export default function App() {
               </li>
             ))}
           </ul>
-
-          <h3 className="sub-title">
-            <Icon name="wallet" size={16} />
-            大概要花多少
-          </h3>
-          <ul className="rows rows-num">
-            {budget.rows.map((r) => (
-              <li key={r.k} className={r.total ? 'is-total' : ''}>
-                <span className="row-k">{r.k}</span>
-                <span className="row-v">{r.v}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="fineprint">{budget.note}</p>
         </section>
 
         <footer className="foot">
-          <p>祝玩得開心。累了就坐下來，行程本來就是拿來刪的。</p>
+          <p>營業時間、船班、開合秀場次都以官方公告為準。</p>
           <p className="foot-credit">
             照片取自 Wikimedia Commons，點任何一張都會開到原始檔案頁，上面有作者與授權。
           </p>

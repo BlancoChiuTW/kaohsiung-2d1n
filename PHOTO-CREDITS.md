@@ -22,13 +22,11 @@
 | `kw2` | [高雄歷史新基地 棧貳庫 KW2.jpg](https://commons.wikimedia.org/wiki/File:%E9%AB%98%E9%9B%84%E6%AD%B7%E5%8F%B2%E6%96%B0%E5%9F%BA%E5%9C%B0_%E6%A3%A7%E8%B2%B3%E5%BA%AB_KW2.jpg) | HSIAO, WEN-CHIEN | CC BY-SA 4.0 |
 | `library` | [Kaohsiung Main Library 201507.jpg](https://commons.wikimedia.org/wiki/File:Kaohsiung_Main_Library_201507.jpg) | Wpcpey | CC BY 4.0 |
 | `lighthouse` | [旗後燈塔1.jpg](https://commons.wikimedia.org/wiki/File:%E6%97%97%E5%BE%8C%E7%87%88%E5%A1%941.jpg) | Chang660614 | CC BY-SA 4.0 |
-| `liuhe` | [Kaohsiung Liuhe Night Street Market 1.jpg](https://commons.wikimedia.org/wiki/File:Kaohsiung_Liuhe_Night_Street_Market_1.jpg) | Zairon | CC BY-SA 4.0 |
 | `loveriver` | [Gondola on Love River, Kaohsiung, Taiwan.JPG](https://commons.wikimedia.org/wiki/File:Gondola_on_Love_River,_Kaohsiung,_Taiwan.JPG) | SSR2000 | CC BY-SA 3.0 |
 | `mimi` | [Weiwu Mimi Village, Kaohsiung - Kaohsiung4583.jpg](https://commons.wikimedia.org/wiki/File:Weiwu_Mimi_Village,_Kaohsiung_-_Kaohsiung4583.jpg) | lumoplank | CC0 |
 | `music` | [Kaohsiung Music Center 20240919-1.jpg](https://commons.wikimedia.org/wiki/File:Kaohsiung_Music_Center_20240919-1.jpg) | Suicasmo | CC BY-SA 4.0 |
 | `pier2` | [202407 Penglai warehouses, Pier-2 Art Center, Kaohsiung.jpg](https://commons.wikimedia.org/wiki/File:202407_Penglai_warehouses,_Pier-2_Art_Center,_Kaohsiung.jpg) | Jonashtand | CC BY-SA 4.0 |
 | `rainbow` | [【高雄景點】旗津彩虹教堂 (30663971394).jpg](https://commons.wikimedia.org/wiki/File:%E3%80%90%E9%AB%98%E9%9B%84%E6%99%AF%E9%BB%9E%E3%80%91%E6%97%97%E6%B4%A5%E5%BD%A9%E8%99%B9%E6%95%99%E5%A0%82_(30663971394).jpg) | fullfen666 | CC BY-SA 2.0 |
-| `ruifeng` | [Ruifeng Night Market, 2026 (03).jpg](https://commons.wikimedia.org/wiki/File:Ruifeng_Night_Market,_2026_(03).jpg) | Bahnfrend | CC BY-SA 4.0 |
 | `shell` | [2013.04.28 Cijin Shell Museum in Kaohsiung.jpg](https://commons.wikimedia.org/wiki/File:2013.04.28_Cijin_Shell_Museum_in_Kaohsiung.jpg) | Jirka Matousek | CC BY 2.0 |
 | `shoushan` | [Kaohsiung night landscape.jpg](https://commons.wikimedia.org/wiki/File:Kaohsiung_night_landscape.jpg) | Joe | CC BY-SA 2.0 |
 | `sizihwan` | [西子灣蔚藍海洋.jpg](https://commons.wikimedia.org/wiki/File:%E8%A5%BF%E5%AD%90%E7%81%A3%E8%94%9A%E8%97%8D%E6%B5%B7%E6%B4%8B.jpg) | 張嘉和 | CC BY-SA 4.0 |

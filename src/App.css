@@ -282,7 +282,6 @@
 .chip-core { color: var(--label); background: var(--fill-2); }
 .chip-flex { color: var(--label-2); background: var(--fill-2); }
 .chip-bonus { color: var(--label-2); background: var(--fill); border: 0.5px dashed var(--sep-strong); }
-.chip-star { color: var(--mark); background: var(--mark-soft); }
 
 .tl-title-line {
   display: flex;
@@ -507,28 +506,6 @@
   color: var(--label-2);
 }
 
-.rows-num li {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-}
-.rows-num .row-v {
-  margin-top: 0;
-  font-variant-numeric: tabular-nums;
-  font-weight: 590;
-  color: var(--label);
-}
-.rows-num .is-total { background: var(--fill); }
-.rows-num .is-total .row-v { color: var(--label); font-weight: 680; }
-
-.fineprint {
-  margin-top: 10px;
-  font-size: var(--fs-caption1);
-  line-height: 17px;
-  letter-spacing: var(--tr-caption1);
-  color: var(--label-3);
-}
 
 /* ═══ 確認清單 ═══ */
 .checks { display: grid; gap: 11px; margin-top: 18px; }
@@ -646,4 +623,88 @@
 .photo-card {
   border-radius: 0;
   aspect-ratio: 16 / 9;
+}
+
+/* ═══ 吃的 ═══ */
+.eats { margin-top: 20px; display: grid; gap: 30px; }
+
+.eatgroup-title {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--label);
+  font-size: var(--fs-title3);
+  line-height: var(--lh-title3);
+  letter-spacing: var(--tr-title3);
+  font-weight: 660;
+}
+.eatgroup-sub {
+  font-size: var(--fs-caption1);
+  line-height: var(--lh-caption1);
+  letter-spacing: var(--tr-caption1);
+  font-weight: 500;
+  color: var(--label-2);
+}
+
+.eatlist { margin-top: 4px; }
+.eatlist li + li { border-top: 0.5px solid var(--sep); }
+
+.eat {
+  display: grid;
+  gap: 5px;
+  padding: 15px 2px;
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+.eat:active { opacity: 0.55; }
+
+.eat-head { display: flex; align-items: center; gap: 7px; }
+.eat-name {
+  font-size: var(--fs-headline);
+  line-height: var(--lh-headline);
+  letter-spacing: var(--tr-headline);
+  font-weight: 620;
+}
+.eat-go { color: var(--label-3); }
+
+.eat-area {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--fs-caption1);
+  line-height: 17px;
+  letter-spacing: var(--tr-caption1);
+  color: var(--label-3);
+}
+
+.eat-why {
+  margin-top: 2px;
+  font-size: var(--fs-subhead);
+  line-height: var(--lh-prose);
+  letter-spacing: var(--tr-subhead);
+  color: var(--label-2);
+}
+
+.eat-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 5px;
+  padding: 8px 11px;
+  border-radius: 12px;
+  background: var(--mark-soft);
+  font-size: var(--fs-caption1);
+  line-height: 17px;
+  letter-spacing: var(--tr-caption1);
+  font-weight: 590;
+  color: var(--mark);
+}
+.eat-alert .icon { margin-top: 2px; flex: none; }
+
+@media (min-width: 720px) {
+  .eatlist { columns: 2; column-gap: 26px; }
+  .eatlist li { break-inside: avoid; }
+  .eatlist li + li { border-top: 0.5px solid var(--sep); }
 }

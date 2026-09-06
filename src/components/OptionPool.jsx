@@ -8,7 +8,6 @@ const STORE_KEY = 'kh2d1n.picked.v1';
 const catIcon = {
   photo: 'photo',
   night: 'night',
-  food: 'food',
   indoor: 'indoor',
   sea: 'sea',
 };
@@ -140,12 +139,6 @@ export default function OptionPool() {
                           <Icon name="clock" size={13} />
                         </dt>
                         <dd>{o.time}</dd>
-                      </div>
-                      <div>
-                        <dt>
-                          <Icon name="wallet" size={13} />
-                        </dt>
-                        <dd>{o.cost}</dd>
                       </div>
                     </dl>
                   </div>

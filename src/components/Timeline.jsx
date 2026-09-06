@@ -22,12 +22,6 @@ function TimelineRow({ item, index, eager }) {
           <span className="tl-head">
             <span className="tl-time">{item.time}</span>
             <span className={`chip chip-${item.kind}`}>{kindLabel[item.kind]}</span>
-            {item.star ? (
-              <span className="chip chip-star">
-                <Icon name="star" size={10} />
-                必拍
-              </span>
-            ) : null}
           </span>
           <span className="tl-title-line">
             <span className="tl-title">{item.title}</span>

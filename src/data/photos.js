@@ -117,14 +117,6 @@ export const photos = {
     license: 'CC BY-SA 4.0',
     source: 'https://commons.wikimedia.org/wiki/File:%E6%97%97%E5%BE%8C%E7%87%88%E5%A1%941.jpg',
   },
-  liuhe: {
-    small: `${BASE}photos/liuhe-640.webp`,
-    large: `${BASE}photos/liuhe-1280.webp`,
-    title: 'Kaohsiung Liuhe Night Street Market 1.jpg',
-    author: 'Zairon',
-    license: 'CC BY-SA 4.0',
-    source: 'https://commons.wikimedia.org/wiki/File:Kaohsiung_Liuhe_Night_Street_Market_1.jpg',
-  },
   loveriver: {
     small: `${BASE}photos/loveriver-640.webp`,
     large: `${BASE}photos/loveriver-1280.webp`,
@@ -164,14 +156,6 @@ export const photos = {
     author: 'fullfen666',
     license: 'CC BY-SA 2.0',
     source: 'https://commons.wikimedia.org/wiki/File:%E3%80%90%E9%AB%98%E9%9B%84%E6%99%AF%E9%BB%9E%E3%80%91%E6%97%97%E6%B4%A5%E5%BD%A9%E8%99%B9%E6%95%99%E5%A0%82_(30663971394).jpg',
-  },
-  ruifeng: {
-    small: `${BASE}photos/ruifeng-640.webp`,
-    large: `${BASE}photos/ruifeng-1280.webp`,
-    title: 'Ruifeng Night Market, 2026 (03).jpg',
-    author: 'Bahnfrend',
-    license: 'CC BY-SA 4.0',
-    source: 'https://commons.wikimedia.org/wiki/File:Ruifeng_Night_Market,_2026_(03).jpg',
   },
   shell: {
     small: `${BASE}photos/shell-640.webp`,
