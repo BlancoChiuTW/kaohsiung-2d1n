@@ -24,6 +24,7 @@ export default function Photo({ id, alt, className = '', eager = false }) {
         decoding="async"
       />
       <span className="photo-credit">
+        {p.area ? <span className="photo-tag">街區照．{p.area}</span> : null}
         <Icon name="link" size={10} strokeWidth={2} />
         {p.author}．{p.license}
       </span>

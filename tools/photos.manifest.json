@@ -41,6 +41,139 @@
     "author": "阿道",
     "license": "CC BY-SA 4.0"
   },
+  "eat_cijinfood": {
+    "file": "旗津海產店08.jpg",
+    "source": "https://www.flickr.com/photos/45031471@N04/9459840130",
+    "download": "https://live.staticflickr.com/2824/9459840130_617eebbdc9_b.jpg",
+    "author": "電冰箱(Simon)",
+    "license": "CC BY-NC-SA 2.0"
+  },
+  "eat_daju": {
+    "file": "2023.07.08 高雄市鹽埕第一公有零售市場",
+    "source": "https://commons.wikimedia.org/w/index.php?curid=134517233",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/3/32/2023.07.08_%E9%AB%98%E9%9B%84%E5%B8%82%E9%B9%BD%E5%9F%95%E7%AC%AC%E4%B8%80%E5%85%AC%E6%9C%89%E9%9B%B6%E5%94%AE%E5%B8%82%E5%A0%B4.jpg",
+    "author": "中華民國總統府",
+    "license": "CC BY 2.0"
+  },
+  "eat_ginza": {
+    "file": "鹽埕區五福四路大安街口20200524.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:%E9%B9%BD%E5%9F%95%E5%8D%80%E4%BA%94%E7%A6%8F%E5%9B%9B%E8%B7%AF%E5%A4%A7%E5%AE%89%E8%A1%97%E5%8F%A320200524.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/%E9%B9%BD%E5%9F%95%E5%8D%80%E4%BA%94%E7%A6%8F%E5%9B%9B%E8%B7%AF%E5%A4%A7%E5%AE%89%E8%A1%97%E5%8F%A320200524.jpg/1280px-%E9%B9%BD%E5%9F%95%E5%8D%80%E4%BA%94%E7%A6%8F%E5%9B%9B%E8%B7%AF%E5%A4%A7%E5%AE%89%E8%A1%97%E5%8F%A320200524.jpg",
+    "author": "地下高雄",
+    "license": "CC BY-SA 4.0"
+  },
+  "eat_henri": {
+    "file": "哨船頭遊艇碼頭",
+    "source": "https://commons.wikimedia.org/w/index.php?curid=79392904",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/2/2c/%E5%93%A8%E8%88%B9%E9%A0%AD%E9%81%8A%E8%89%87%E7%A2%BC%E9%A0%AD.jpg",
+    "author": "WEI, WAN-CHEN（魏琬臻）",
+    "license": "CC BY-SA 4.0"
+  },
+  "eat_ichi": {
+    "file": "書店喫茶一二三亭",
+    "source": "https://www.flickr.com/photos/23959464@N00/49151449171",
+    "download": "https://live.staticflickr.com/65535/49151449171_827efa7fd7_b.jpg",
+    "author": "uemu",
+    "license": "CC BY 2.0"
+  },
+  "eat_kawa": {
+    "file": "鹽埕區南興後街20200203.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:%E9%B9%BD%E5%9F%95%E5%8D%80%E5%8D%97%E8%88%88%E5%BE%8C%E8%A1%9720200203.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/%E9%B9%BD%E5%9F%95%E5%8D%80%E5%8D%97%E8%88%88%E5%BE%8C%E8%A1%9720200203.jpg/1280px-%E9%B9%BD%E5%9F%95%E5%8D%80%E5%8D%97%E8%88%88%E5%BE%8C%E8%A1%9720200203.jpg",
+    "author": "地下高雄",
+    "license": "CC BY-SA 4.0"
+  },
+  "eat_liuhe": {
+    "file": "Liuhe Night Market",
+    "source": "https://www.flickr.com/photos/19289077@N00/14988670175",
+    "download": "https://live.staticflickr.com/3863/14988670175_4df519e321_b.jpg",
+    "author": "¡kuba!",
+    "license": "CC BY-NC 2.0"
+  },
+  "eat_luren": {
+    "file": "ARTCO-大義倉庫C6",
+    "source": "https://www.flickr.com/photos/21153960@N00/46167884045",
+    "download": "https://live.staticflickr.com/7916/46167884045_4e82516385_b.jpg",
+    "author": "【TACO】",
+    "license": "CC BY-SA 2.0"
+  },
+  "eat_nieh": {
+    "file": "高雄市街頭 Kaohsiung's street",
+    "source": "https://www.flickr.com/photos/92585929@N06/34367322606",
+    "download": "https://live.staticflickr.com/2828/34367322606_4b200a7374_b.jpg",
+    "author": "Chi-Hung Lin",
+    "license": "CC BY-SA 2.0"
+  },
+  "eat_oracle": {
+    "file": "鹽埕區七賢三路街屋-01.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:%E9%B9%BD%E5%9F%95%E5%8D%80%E4%B8%83%E8%B3%A2%E4%B8%89%E8%B7%AF%E8%A1%97%E5%B1%8B-01.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/%E9%B9%BD%E5%9F%95%E5%8D%80%E4%B8%83%E8%B3%A2%E4%B8%89%E8%B7%AF%E8%A1%97%E5%B1%8B-01.jpg/1280px-%E9%B9%BD%E5%9F%95%E5%8D%80%E4%B8%83%E8%B3%A2%E4%B8%89%E8%B7%AF%E8%A1%97%E5%B1%8B-01.jpg",
+    "author": "Sin-siōng",
+    "license": "CC BY 4.0"
+  },
+  "eat_ruifeng": {
+    "file": "高雄市瑞豐夜市與裕誠路",
+    "source": "https://commons.wikimedia.org/w/index.php?curid=14458854",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/1/19/%E9%AB%98%E9%9B%84%E5%B8%82%E7%91%9E%E8%B1%90%E5%A4%9C%E5%B8%82%E8%88%87%E8%A3%95%E8%AA%A0%E8%B7%AF.jpg",
+    "author": "見來源頁",
+    "license": "CC BY 3.0"
+  },
+  "eat_seastar": {
+    "file": "Cijin Beach",
+    "source": "https://www.flickr.com/photos/61828750@N07/12300190193",
+    "download": "https://live.staticflickr.com/7302/12300190193_754345a2ed_b.jpg",
+    "author": "JIMIYU0217",
+    "license": "CC BY-NC-SA 2.0"
+  },
+  "eat_shinhama": {
+    "file": "IMG_9599",
+    "source": "https://www.flickr.com/photos/14089816@N05/53965427256",
+    "download": "https://live.staticflickr.com/65535/53965427256_b9aa8d39fb_b.jpg",
+    "author": "rafm0913",
+    "license": "CC BY-NC-SA 2.0"
+  },
+  "eat_shiroi": {
+    "file": "旗津海岸公園 | July 19, 2010",
+    "source": "https://www.flickr.com/photos/20537280@N00/4808055633",
+    "download": "https://live.staticflickr.com/4096/4808055633_d219aaeda4_b.jpg",
+    "author": "::C'est la vie::",
+    "license": "CC BY-SA 2.0"
+  },
+  "eat_shoreline": {
+    "file": "西子灣海堤",
+    "source": "https://www.flickr.com/photos/42406724@N08/15072597438",
+    "download": "https://live.staticflickr.com/3835/15072597438_da4d850dc3_b.jpg",
+    "author": "郭建良",
+    "license": "CC BY-NC-SA 2.0"
+  },
+  "eat_takaokitsu": {
+    "file": "高雄市立歷史博物館",
+    "source": "https://www.flickr.com/photos/8873441@N06/53183661107",
+    "download": "https://live.staticflickr.com/65535/53183661107_f59561695a_b.jpg",
+    "author": "紅色死神",
+    "license": "CC BY-NC-SA 2.0"
+  },
+  "eat_umicafe": {
+    "file": "美和運輸組 (3)",
+    "source": "https://www.flickr.com/photos/41728859@N00/7060662779",
+    "download": "https://live.staticflickr.com/7207/7060662779_16b6244e90_b.jpg",
+    "author": "speedbug",
+    "license": "CC BY-NC-SA 2.0"
+  },
+  "eat_xiaoti": {
+    "file": "高雄鹽埕：小堤咖啡",
+    "source": "https://www.flickr.com/photos/30355632@N03/30111756416",
+    "download": "https://live.staticflickr.com/5500/30111756416_a6d3c1a486_b.jpg",
+    "author": "athenakuo",
+    "license": "CC BY-NC-SA 2.0"
+  },
+  "eat_yanchengold": {
+    "file": "鴨肉珍",
+    "source": "https://www.flickr.com/photos/13322960@N00/9545846431",
+    "download": "https://live.staticflickr.com/3675/9545846431_ffab782bd6_b.jpg",
+    "author": "Kaba",
+    "license": "CC BY-NC-SA 2.0"
+  },
   "ferry": {
     "file": "File:202001 Views from ferry from Gushan to Cijin, Kaohsiung 03.jpg",
     "source": "https://commons.wikimedia.org/wiki/File:202001_Views_from_ferry_from_Gushan_to_Cijin,_Kaohsiung_03.jpg",

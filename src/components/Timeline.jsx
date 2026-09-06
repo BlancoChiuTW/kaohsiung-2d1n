@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Icon from './Icon';
 import Photo from './Photo';
 
-const kindLabel = { core: '主線', flex: '彈性', bonus: '加碼' };
+const kindLabel = { core: '主線', flex: '彈性' };
 
 function TimelineRow({ item, index, eager }) {
   const [open, setOpen] = useState(false);

@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import Icon from './components/Icon';
 import Timeline from './components/Timeline';
-import OptionPool from './components/OptionPool';
+import Places from './components/Places';
 import Eats from './components/Eats';
-import { beforeYouGo, days, goldenHours, meta, planB, transit } from './data/trip';
+import { beforeYouGo, goldenHours, meta, planB, routes, transit } from './data/trip';
 import './App.css';
 
 // 章節捲到定位後標題大約落在這條線下方，用來判斷「現在在哪一節」
@@ -12,7 +12,7 @@ const ACTIVE_LINE = 140;
 const SECTIONS = [
   { id: 'day1', label: 'Day 1' },
   { id: 'day2', label: 'Day 2' },
-  { id: 'pool', label: '加碼' },
+  { id: 'pool', label: '其他' },
   { id: 'eat', label: '吃的' },
   { id: 'light', label: '光線' },
   { id: 'planb', label: '備案' },
@@ -77,11 +77,32 @@ function SectionHead({ kicker, title, lead, icon }) {
   );
 }
 
+const ROUTE_KEY = 'kh2d1n.route.v1';
+
+function readRoute() {
+  try {
+    const v = localStorage.getItem(ROUTE_KEY);
+    return routes.some((r) => r.id === v) ? v : routes[0].id;
+  } catch {
+    return routes[0].id;
+  }
+}
+
 export default function App() {
   const progress = useScrollProgress();
   const active = useActiveSection();
   const [coreOnly, setCoreOnly] = useState(false);
+  const [routeId, setRouteId] = useState(readRoute);
   const navRef = useRef(null);
+  const route = routes.find((r) => r.id === routeId) ?? routes[0];
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(ROUTE_KEY, routeId);
+    } catch {
+      /* 忽略 */
+    }
+  }, [routeId]);
 
   // 只捲導覽列自己的水平捲軸。用 scrollIntoView 會連帶動到整頁，跟章節跳轉打架。
   useEffect(() => {
@@ -143,11 +164,35 @@ export default function App() {
           </ul>
         </header>
 
+        <section className="routepick" aria-label="選擇路線">
+          <p className="routepick-label">兩條路線，選一條</p>
+          <div className="seg" role="tablist">
+            {routes.map((r) => (
+              <button
+                key={r.id}
+                type="button"
+                role="tab"
+                aria-selected={r.id === routeId}
+                className={`seg-btn ${r.id === routeId ? 'is-on' : ''}`}
+                onClick={() => setRouteId(r.id)}
+              >
+                <span className="seg-label">{r.label}</span>
+                <span className="seg-tag">{r.tagline}</span>
+              </button>
+            ))}
+          </div>
+          <p className="routepick-summary">{route.summary}</p>
+          <p className="routepick-tradeoff">
+            <Icon name="info" size={14} />
+            <span>{route.tradeoff}</span>
+          </p>
+        </section>
+
         <div className="toolbar">
           <div className="toolbar-txt">
             <p className="toolbar-title">行程密度</p>
             <p className="toolbar-note">
-              {coreOnly ? '只顯示主線。' : '主線、彈性、加碼全部顯示。'}
+              {coreOnly ? '只顯示主線。' : '主線和彈性都顯示。'}
             </p>
           </div>
           <button
@@ -162,11 +207,11 @@ export default function App() {
           </button>
         </div>
 
-        {days.map((day) => (
-          <section key={day.id} id={day.id} className="sec">
+        {route.days.map((day) => (
+          <section key={`${route.id}-${day.id}`} id={day.id} className="sec">
             <SectionHead
               kicker={`${day.label}．${day.title}`}
-              icon={day.id === 'day1' ? 'sea' : 'transit'}
+              icon={day.title === '港線' ? 'sea' : 'transit'}
               title={day.heading}
               lead={day.intro}
             />
@@ -178,10 +223,10 @@ export default function App() {
           <SectionHead
             kicker="去不去都可以"
             icon="pin"
-            title="加碼選項池"
-            lead="以下都是可去可不去的。勾起來的會存在這個瀏覽器，下次打開還在。"
+            title="其他可以去的地方"
+            lead="沒有排進上面兩天的地方，依區域分批。勾起來的會存在這個瀏覽器，下次打開還在。"
           />
-          <OptionPool />
+          <Places />
         </section>
 
         <section id="eat" className="sec">
@@ -189,7 +234,7 @@ export default function App() {
             kicker="咖啡廳與餐廳"
             icon="food"
             title="吃的"
-            lead="依兩條路線分開。點店名會開 Google 地圖。營業時間和公休日變動很快，出發前再確認一次。"
+            lead="依區域分開，兩條路線都用得到。點店名會開 Google 地圖。營業時間和公休日變動很快，出發前再確認一次。"
           />
           <Eats />
         </section>

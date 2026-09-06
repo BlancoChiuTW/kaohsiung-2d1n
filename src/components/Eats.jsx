@@ -1,4 +1,5 @@
 import Icon from './Icon';
+import Photo from './Photo';
 import { eats } from '../data/trip';
 
 const mapUrl = (name, area) =>
@@ -15,7 +16,8 @@ export default function Eats() {
           </h3>
           <ul className="eatlist">
             {group.places.map((pl) => (
-              <li key={pl.name}>
+              <li key={pl.name} className="eatcard">
+                {pl.photo ? <Photo id={pl.photo} alt={pl.name} className="photo-card" /> : null}
                 <a
                   className="eat"
                   href={mapUrl(pl.name, pl.area)}

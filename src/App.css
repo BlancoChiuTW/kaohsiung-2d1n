@@ -245,7 +245,6 @@
 }
 .tl-core .tl-dot { border-color: var(--tint); background: var(--tint); }
 .tl-flex .tl-dot { border-color: var(--label-3); }
-.tl-bonus .tl-dot { border-color: var(--label-3); border-style: dashed; }
 
 .tl-main { min-width: 0; padding-bottom: 16px; }
 
@@ -281,7 +280,6 @@
 }
 .chip-core { color: var(--label); background: var(--fill-2); }
 .chip-flex { color: var(--label-2); background: var(--fill-2); }
-.chip-bonus { color: var(--label-2); background: var(--fill); border: 0.5px dashed var(--sep-strong); }
 
 .tl-title-line {
   display: flex;
@@ -317,7 +315,7 @@
   color: var(--label-2);
 }
 
-/* ═══ 加碼池 ═══ */
+/* ═══ 其他可以去的地方 ═══ */
 .pool { margin-top: 20px; }
 
 .pool-bar { margin: 0 calc(var(--pad) * -1); }
@@ -647,13 +645,20 @@
   color: var(--label-2);
 }
 
-.eatlist { margin-top: 4px; }
-.eatlist li + li { border-top: 0.5px solid var(--sep); }
+.eatlist { margin-top: 14px; display: grid; gap: 12px; }
+
+.eatcard {
+  overflow: hidden;
+  border-radius: var(--r-card);
+  background: var(--bg-elev);
+  border: 0.5px solid var(--sep);
+  box-shadow: var(--shadow);
+}
 
 .eat {
   display: grid;
   gap: 5px;
-  padding: 15px 2px;
+  padding: 15px 16px 16px;
   text-decoration: none;
   color: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -704,7 +709,109 @@
 .eat-alert .icon { margin-top: 2px; flex: none; }
 
 @media (min-width: 720px) {
-  .eatlist { columns: 2; column-gap: 26px; }
-  .eatlist li { break-inside: avoid; }
-  .eatlist li + li { border-top: 0.5px solid var(--sep); }
+  .eatlist { grid-template-columns: 1fr 1fr; }
+}
+
+/* ═══ 路線選擇 ═══ */
+.routepick {
+  margin-top: 26px;
+  padding: 16px;
+  border-radius: var(--r-card);
+  background: var(--bg-elev);
+  border: 0.5px solid var(--sep);
+  box-shadow: var(--shadow);
+}
+.routepick-label {
+  font-size: var(--fs-caption1);
+  line-height: var(--lh-caption1);
+  letter-spacing: 0.4px;
+  font-weight: 650;
+  color: var(--label-2);
+}
+
+.seg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-top: 10px;
+  padding: 4px;
+  border-radius: 16px;
+  background: var(--fill);
+}
+.seg-btn {
+  display: grid;
+  gap: 2px;
+  min-height: 52px;
+  padding: 8px 6px;
+  border-radius: 12px;
+  transition: background 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+}
+.seg-btn.is-on {
+  background: var(--tint);
+  color: var(--on-tint);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+.seg-label {
+  font-size: var(--fs-subhead);
+  line-height: var(--lh-subhead);
+  letter-spacing: var(--tr-subhead);
+  font-weight: 650;
+}
+.seg-tag {
+  font-size: var(--fs-caption2);
+  line-height: 14px;
+  letter-spacing: var(--tr-caption2);
+  font-weight: 500;
+  opacity: 0.72;
+}
+
+.routepick-summary {
+  margin-top: 14px;
+  font-size: var(--fs-subhead);
+  line-height: var(--lh-prose);
+  letter-spacing: var(--tr-subhead);
+}
+.routepick-tradeoff {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 11px;
+  padding-top: 11px;
+  border-top: 0.5px solid var(--sep);
+  font-size: var(--fs-footnote);
+  line-height: var(--lh-prose);
+  letter-spacing: var(--tr-footnote);
+  color: var(--label-2);
+}
+.routepick-tradeoff .icon { margin-top: 3px; flex: none; color: var(--label-3); }
+
+/* ═══ 分批標題 ═══ */
+.batch { margin-top: 26px; }
+.batch-title {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--label);
+  font-size: var(--fs-title3);
+  line-height: var(--lh-title3);
+  letter-spacing: var(--tr-title3);
+  font-weight: 660;
+}
+.batch-sub {
+  font-size: var(--fs-caption1);
+  line-height: var(--lh-caption1);
+  letter-spacing: var(--tr-caption1);
+  font-weight: 500;
+  color: var(--label-2);
+}
+.batch .cards { margin-top: 12px; }
+
+/* 街區照標籤 */
+.photo-tag {
+  padding: 2px 6px;
+  margin-right: 3px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.16);
+  font-weight: 620;
 }
